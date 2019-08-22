@@ -1,0 +1,18 @@
+{
+    "family": "%appname%",
+    "containerDefinitions": [
+        {
+            "image": "your-repository/flask-signup:v_%BUILD_NUMBER%",
+            "name": "%appname%",
+            "cpu": 256,
+            "memory": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 9090
+                }
+            ]
+        }
+    ]
+}
